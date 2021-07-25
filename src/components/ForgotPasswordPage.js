@@ -30,7 +30,7 @@ export default function ForgotPasswordPage({setStatus}) {
             if(rawData.status==200){
                 let jsonData=await rawData.json()
                 .then(res=>{
-                    setStatus("Reset Password Link has been sent to your email Id, The link will be valid only for 5 minutes")
+                    setStatus("Reset Password Link has been sent to your email Id, The link will be valid only for 5 minutes(If not found, Kindly also check in spam folder)")
                     history.push("/status")
                 })
             }else if(rawData.status==500){

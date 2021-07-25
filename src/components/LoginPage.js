@@ -18,7 +18,7 @@ export default function LoginPage({setStatus}) {
       } = useForm({ resolver: yupResolver(validationSchema) });
     
       const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
         const loginUser=async()=>{
             const url="https://password-reset-server.herokuapp.com/login"
             const rawData=await fetch(url,{

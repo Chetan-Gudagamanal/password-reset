@@ -38,6 +38,8 @@ export default function Register({setStatus}) {
                 alert("created successfully")
                 setStatus("User created successfully, You can now Login with your credentials")
                 history.push("/status")
+            } else{
+                alert(jsonData)
             }
         }
         registerUser()
